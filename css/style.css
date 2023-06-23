@@ -636,6 +636,24 @@ font-size: 25px;
 }
 
 
+.who_we_are_img figure img {
+     width: 70%;
+	 padding-top: 70px;
+	 padding-bottom: 70px;
+}
+
+.success	{
+	background-color: #dff0d8;
+}
+.info	{
+	background-color:#d9edf7;
+}
+.warning	{
+	background-color:#fcf8e3;
+}
+.danger	{
+	background-color:#f2dede;
+}
 /** end about section **/
 
 
@@ -672,6 +690,10 @@ font-size: 25px;
 }
 
 .mobile_img figure img {
+     width: 100%;
+}
+
+.why_cogentix figure img {
      width: 100%;
 }
 
