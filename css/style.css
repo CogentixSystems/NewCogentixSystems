@@ -478,6 +478,22 @@ margin-top:-10px;
 
 /** banner section **/
 
+.titlepage .mainline{
+font-size: 25px;
+}
+.titlepage .mainline1{
+     font-size: 20px;
+     text-align: center;
+     }
+.titlepage .cocreate{
+     background: #32BE16;
+     display: block;
+     height: 5px;
+     width: 173px;
+     margin-left: 470px;
+}
+ 
+
 .titlepage {
      text-align: center;
      padding-bottom: 60px;
