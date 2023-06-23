@@ -1,2 +1,2 @@
-# CogentixSystems
- CogentixSystems
+# Cogentix
+ Cogentix
