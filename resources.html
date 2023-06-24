@@ -30,34 +30,60 @@
 	    
       <script> 
 	  
-	  $(document).ready(function() {
-  $(".vid").fancybox({
-    type: "iframe", //<--added
-    maxWidth: 800,
-    maxHeight: 600,
-    fitToView: false,
-    width: '70%',
-    height: '70%',
-    autoSize: false,
-    closeClick: false,
-    openEffect: 'elastic',
-    closeEffect: 'elastic'
-  });
+/* Lets user use color scheme dropdown to change scheme color. */
+$('#color-scheme').change(function(){
+  var colorScheme = $('#color-scheme').val();
+  $('.wppw-title-font-color').css('color',colorScheme);
+  $('.wppw-background-color').css('background-color',colorScheme);
+});
 
-  // $(".video").hover(function() {
-  //   $(".vid").fadeTo('slow', 0.5);
-  // });
-  
-  $('.video').hover(function() {
-    $(this).find('img').fadeTo(1000, 0.5);
-  }, function() {
-    $(this).find('img').fadeTo(1000, 1);
-  });
-  
-  
-  
-})
-	  
+/* Lets user use text color dropdown to change text color. */
+$('#text-color-choice').change(function(){
+  var colorText = $('#text-color-choice').val();
+  $('.wppw-text-font-color').css('color',colorText);
+});
+
+/* Lets user use font dropdown to change font. */
+$('#font-choice').change(function(){
+  var fontText = $('#font-choice').val();
+  $('.wppw-font').css('font-family',fontText);
+});
+
+/* Lets user input custom color for scheme */
+$('#custom-color-scheme').keyup(function(e){
+  if(e.which == 13) {
+    var colorScheme = $('#custom-color-scheme').val();
+    $('.wppw-title-font-color').css('color',colorScheme);
+    $('.wppw-background-color').css('background-color',colorScheme);
+    
+    //Checks if value is able to be used
+    var color = $('.wppw-title-font-color').css('color');
+    if (color.length==0) {
+      $('.wppw-title-font-color').css('color','#DA4454');
+      $('.wppw-background-color').css('background-color','#DA4454');
+    }
+    
+    //Resets value of text area
+    $('#custom-color-scheme').val('');
+  }
+});
+
+/* Lets user input custom color for text */
+$('#custom-color-text').keyup(function(e){
+  if(e.which == 13) {
+    var colorScheme = $('#custom-color-text').val();
+    $('.wppw-text-font-color').css('color',colorScheme);
+    
+    //Checks if value is able to be used
+    var color = $('.wppw-text-font-color').css('color');
+    if (color.length==0) {
+      $('.wppw-text-font-color').css('color','#DA4454');
+    }
+    
+    //Resets value of text area
+    $('#custom-color-text').val('');
+  }
+});
 	  
    </script>
    
@@ -174,30 +200,64 @@
             </div>
 			
  <div class="row video-gallery">
-    <div class="video">
-      <a class="vid fancybox" href="https://www.youtube.com/embed/njSyHmcEdkw">
-        <img src="https://unsplash.it/g/254/150?img=4">
-        <div class="video-title">Galaxy Sounds</div>
-      </a>
-    </div>
+     
+	  <!-- Imported fonts from google fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
 
-    <div class="video">
-      <a class="vid fancybox" href="https://www.youtube.com/embed/njSyHmcEdkw">
-        <img src="https://unsplash.it/254/150?img=3&gravity=center">
-        <div class="video-title">beef insurance</div>
-      </a>
+<!-- Fancybox Start -->
+<div class="wppw-fancy wppw-apply-margins">
+  <div class="wppw-underlay wppw-shadow wppw-background-color wppw-wobble-inverse">
+    <div class="wppw-fancybox-margins wppw-wobble">
+      <div class="wppw-fancybox wppw-skew">
+        <div class="wppw-info wppw-shadow wppw-skew">
+          <!-- Put Title Here -->
+          <h2 class="wppw-h2 wppw-swish"><a href="https://asche.co.uk" target="_blank" class="wppw-title-link wppw-font wppw-title-font-color">Title</a></h2>
+          <!-- Place Text Here, limit to 40 words -->
+          <p class="wppw-p wppw-font wppw-text-font-color wppw-justify wppw-swish">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta atque dolorum at dolor, laborum expedita officia quas aperiam fuga porro est quam recusandae veniam! Officia eligendi illo numquam vitae consectetur autem modi facilis corporis vel ex aut, ab dolorem atque?</p>
+          <div class="wppw-link wppw-swish">
+            <!-- Change Location Here -->
+            <a href="https://asche.co.uk" target="_blank" class="wppw-read-more wppw-link-font-color wppw-background-color" />Read More</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
+<!-- Fancybox End -->
 
-    <div class="video">
-      <a class="vid fancybox" href="https://www.youtube.com/embed/njSyHmcEdkw">
-        <img src="https://unsplash.it/254/150?img=5&gravity=west">
-        <div class="video-title">flaxen</div>
-      </a>
-    </div>  
+<!-- Fancybox Start -->
+<div class="wppw-fancy wppw-apply-margins">
+  <div class="wppw-underlay wppw-shadow wppw-background-color wppw-wobble-inverse">
+    <div class="wppw-fancybox-margins wppw-wobble">
+      <div class="wppw-fancybox wppw-skew">
+        <div class="wppw-info wppw-shadow wppw-skew">
+          <!-- Put Title Here -->
+          <h2 class="wppw-h2 wppw-swish"><a href="https://asche.co.uk" target="_blank" class="wppw-title-link wppw-font wppw-title-font-color">Full Name</a></h2>
+          <!-- Place Text Here, limit to 40 words -->
+          <div class="wppw-image">
+            <div class="image-placeholder wppw-font">100x100</div>
+          </div>
+          <p class="wppw-p wppw-font wppw-text-font-color wppw-wrap wppw-justify wppw-swish">This is but simply an example profile that rambles on about meaningless things. Rabbits are trolls and squirrels eat nuts, foxes make the weirdest sounds and aren't afraid of the big black.</p>
+          <div class="wppw-link wppw-swish">
+            <!-- Change Location Here -->
+            <a href="https://asche.co.uk" target="_blank" class="wppw-read-more wppw-link-font-color wppw-background-color" />Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fancybox End -->
+
   </div> 
  </div> 
 </div>  
 	  
+	 
 	  
       <!--  footer -->
       <footer>
