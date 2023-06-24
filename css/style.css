@@ -763,7 +763,9 @@ font-size: 25px;
      color: white;
 }
 
-
+.cardtech h2:hover{
+     color: white;
+}
 
 .cardnews{
      border:none;
