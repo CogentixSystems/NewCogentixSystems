@@ -28,28 +28,50 @@
       <link rel="stylesheet" href="css/boot.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 	    
- 
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <script> 
 	  
-	   <script>
-      function hide() {
-	     document.getElementById('pRead').hidden = false
-         document.getElementById('pReadMoreAbout').hidden = true
-		 
-		 document.getElementById('btnReadMore').hidden = false
-		 document.getElementById('btnReadLess').hidden = true
-      }
+	  $(document).ready(function() {
+  $(".vid").fancybox({
+    type: "iframe", //<--added
+    maxWidth: 800,
+    maxHeight: 600,
+    fitToView: false,
+    width: '70%',
+    height: '70%',
+    autoSize: false,
+    closeClick: false,
+    openEffect: 'elastic',
+    closeEffect: 'elastic'
+  });
+
+  // $(".video").hover(function() {
+  //   $(".vid").fadeTo('slow', 0.5);
+  // });
+  
+  $('.video').hover(function() {
+    $(this).find('img').fadeTo(1000, 0.5);
+  }, function() {
+    $(this).find('img').fadeTo(1000, 1);
+  });
+  
+  
+  
+})
 	  
-      function show() {
-	     document.getElementById('pRead').hidden = true  
-	     document.getElementById('pReadMoreAbout').hidden = false
-	          		 
-		 document.getElementById('btnReadMore').hidden = true
-		 document.getElementById('btnReadLess').hidden = false
-      }
+	  
    </script>
+   
+   <style> 
+   
+      
+.resources .row {
+  margin: auto;
+  width: 70%;
+  width:100%;
+}
+   
+   
+   </style>
    
    </head>
    <!-- body -->
@@ -73,7 +95,7 @@
                               <div class="row">
 						          <div class="col-sm-5">
 						               <a href="index.html"><img src="images/logo.png"   alt="#" /></a>                            
-                                  </div>                          
+                                  </div>							                                
                               </div>		   
 						      
                            </div>
@@ -92,7 +114,7 @@
                                     <a class="nav-link" href="index.html"> Home  </a>
                                  </li> 
                                 
-								  <li class="nav-item">
+								 <li class="nav-item">
 								  <div class="dropdown">
 									<button  id="drpdwn" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Services
 									<span class="caret"></span></button>
@@ -128,7 +150,6 @@
                               <div class="sign_btn" ><a href="#">Book a Free Consultation</a></div>
                            </div>
                         </nav>
-
                      </div>
                   </div>
                </div>
@@ -137,53 +158,48 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
+	  
 
 
-      <!-- about -->
-      <div id="about"  class="about">
-         <div class="container">
-            <div class="row d_flex">
-               <div class="col-md-7">
+<div id="cards_landscape_wrap-2" class="about resources">
+  <div class="container">
+		 <div class="row">
+               <div class="col-md-6 offset-md-3">
                   <div class="titlepage">
-                     <h2>About</h2>
+                     <h2>Resources</h2>
                      <span></span>
-   
-					 
-					 
-					  <p id='pRead'>We are a custom web app development company curating web applications according to your requirements. With the usage of industrial expertise and the latest technologies, our web applications comprise highly robust frontends and backends scaling your business just the way you want. </p>
-					  <p id='pReadMoreAbout' hidden> 
-					     </br>   </br>
-					 
-						Creating simple online presentations. Building large, custom-built portals. Website development covers it all. Therefore, estimating the cost of the service heavily depends on your client’s requirements.
-                        </br>   </br>
-                        At Cogentix Systems IT, we typically start by proposing a fixed pricing model. As your business and our team get to know each other, such an initial setup usually turns into a dedicated team. That means we deploy a team of experts to work full-time on your projects.
-</br>   </br>
-                        From new website development to maintaining existing sites, we have the firepower you need to succeed. As your needs change, we can easily downsize or scale the team.
-</br>   </br>
-                        We always pay special attention to the needs and requirements of end users in order to increase the target audience and ROI for our customers. Our skilled team applies the best practices and concepts for maximizing the efficiency and usability of the design.
-
-					</p>
-					 
-                     
-					
-					 
-					 
-                     <a  target="_blank" onclick="show()" id='btnReadMore'style="text-decoration: none;"  class="read_more">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-					 
-					   <a class="read_more" onclick="hide()" id='btnReadLess' hidden>Read Less <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                   </div>
-               </div>
-               <div class="col-md-5">
-                  <div class="about_img">
-                     <figure><img src="images/About.png" alt="#"/></figure>
-                  </div>
+				  <br>
                </div>
             </div>
-         </div>
-      </div>
-      
+			
+ <div class="row video-gallery">
+    <div class="video">
+      <a class="vid fancybox" href="https://www.youtube.com/embed/njSyHmcEdkw">
+        <img src="https://unsplash.it/g/254/150?img=4">
+        <div class="video-title">Galaxy Sounds</div>
+      </a>
+    </div>
+
+    <div class="video">
+      <a class="vid fancybox" href="https://www.youtube.com/embed/njSyHmcEdkw">
+        <img src="https://unsplash.it/254/150?img=3&gravity=center">
+        <div class="video-title">beef insurance</div>
+      </a>
+    </div>
+
+    <div class="video">
+      <a class="vid fancybox" href="https://www.youtube.com/embed/njSyHmcEdkw">
+        <img src="https://unsplash.it/254/150?img=5&gravity=west">
+        <div class="video-title">flaxen</div>
+      </a>
+    </div>  
+  </div> 
+ </div> 
+</div>  
 	  
-	  <!--  footer -->
+	  
+      <!--  footer -->
       <footer>
          <div >
             <div class="container">
@@ -232,6 +248,7 @@
             </div>
          </div>
       </footer>
+      <!-- end footer -->
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
