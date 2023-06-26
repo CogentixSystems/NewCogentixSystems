@@ -1153,6 +1153,26 @@ font-size: 25px;
 
 
 /** footer **/
+.footnavlogo {
+     top: 50px;
+     right: 10px;
+}
+/* .footnavlogo img{
+     height:150px !important; 
+     width: 180px;
+} */
+.footnav {
+     top: 50px;
+     left: 20px;
+}
+.footnav a{
+     font-size: 1.4em;
+     font-weight: 300;
+     border-bottom: 2px solid #35e112;
+}
+.footnav a:hover{
+     color:#35e112 ;
+}
 
 .footer {
      background: #fff;
@@ -1660,7 +1680,7 @@ ul.cont li {
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid rgba(0,0,0,.15);
-    border-radius: 
+ 
 }
 
 ul, li, ol {
