@@ -1153,6 +1153,10 @@ font-size: 25px;
 
 
 /** footer **/
+.footicon li i:hover{
+     color:#35e112 ;
+}
+
 .footnavlogo {
      top: 50px;
      right: 10px;
