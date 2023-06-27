@@ -633,10 +633,12 @@ h1 {
 }
 
 /** end events section **/
-
+/* .titlepage #cogen{
+     color: #32BE16;
+} */
 
 .titlepage .mainline{
-font-size: 25px;
+font-size: 22px;
 }
 .titlepage .mainline1{
      font-size: 20px;
