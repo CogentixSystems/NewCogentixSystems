@@ -1153,6 +1153,13 @@ font-size: 25px;
 
 
 /** footer **/
+.chat-btn{
+     margin-left: 1150px;
+     position:fixed ;
+     top:650px;
+     font-size:25px;
+}
+
 .footicon li i:hover{
      color:#35e112 ;
 }
