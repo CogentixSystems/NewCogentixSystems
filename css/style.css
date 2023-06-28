@@ -422,6 +422,7 @@ button {
      font-weight: bold;
 	 background-color:#fff;
 	 border-radius: 15px;
+	 display:none;
 }
 
 .carousel-caption span {
