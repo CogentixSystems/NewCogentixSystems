@@ -831,15 +831,27 @@ font-size: 22px;
 
 .success	{
 	background-color: #dff0d8;
+	height: 100px;
+	text-align:center;
+	font-weight:bold;
 }
 .info	{
 	background-color:#d9edf7;
+	height: 100px;
+	text-align:center;
+	font-weight:bold;
 }
 .warning	{
 	background-color:#fcf8e3;
+	height: 100px;
+	text-align:center;
+	font-weight:bold;
 }
 .danger	{
 	background-color:#f2dede;
+	height: 100px;
+	text-align:center;
+	font-weight:bold;
 }
 /** end about section **/
 
